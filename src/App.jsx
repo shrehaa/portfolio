@@ -6,12 +6,11 @@ const App = () => {
   return (
     <div>
     <section>  <Navbar/> </section>
-     <section> <About/> </section>
-     <section style={{height:"100vh", background:"blue"}}>Skills</section>
-     
-     <section style={{height:"100vh", background:"rebeccapurple"}}>Skills</section>
-     <section style={{height:"100vh", background:"yellow"}}>Skills</section>
-     <section style={{height:"100vh", background:"green"}}>Skills</section>
+     <section id="About"> <About/> </section>
+     <section id="Skills" style={{height:"100vh", background:"blue"}}>Skills</section>
+     <section id="Projects" style={{height:"100vh", background:"rebeccapurple"}}>Project</section>
+     <section id="Experience" style={{height:"100vh", background:"yellow"}}>Work Experience</section>
+     <section id="Contact" style={{height:"100vh", background:"green"}}>Contact us</section>
     </div>
  )
 

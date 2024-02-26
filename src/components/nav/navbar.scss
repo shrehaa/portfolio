@@ -5,15 +5,19 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 35px;
     position: fixed;
     color: white;
+    font-size: 25px;
 
 }
 
 
 .navbar li{
     list-style: none;
+}
+.navbar li a{
+    cursor: pointer;
 }
 
 
