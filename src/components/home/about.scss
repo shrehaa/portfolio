@@ -10,12 +10,12 @@
      align-items: center;
  }
  .left{
-     background: #262525;
+     background: #0c0c1d;
      width: 70%;
      padding-left: 3rem;
  }
  .right{
-     background: linear-gradient(-45deg,#3877FF, #262625 70%) ;
+     background: linear-gradient(-45deg, #0c0c1d, #111132 70%) ;
      width: 30%;
  }
  .icons .fa-brands{
@@ -64,7 +64,7 @@
     font-size: 60vh;
     bottom: -120px;
     white-space: nowrap;
-    color: #ffffff09;
+    color: #0c0c1d;
     font-weight: bold;
     width: 50%;
     
@@ -86,7 +86,7 @@
  }
  
  .circle:nth-child(1){
-     background: linear-gradient(90deg, transparent 50%, #262525 50%);
+     background: linear-gradient(90deg, transparent 50%, #0c0c1d 50%);
  width: 28rem;
  
  }

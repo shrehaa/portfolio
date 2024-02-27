@@ -61,11 +61,11 @@ const About = () => {
             iste nemo possimus dicta amet?
           </motion.p>
           
-          <motion.img animate="scrollButton" variants={textVariants} src='../../../public/scroll.png'/>
+          <motion.img style={{cursor:"pointer"}} animate="scrollButton" variants={textVariants} src='../../../public/scroll.png'/>
          
-          <motion.div variants={sliderVariants} initial="initial" animate="animate" className="slidingcontainer">
+          {/* <motion.div variants={sliderVariants} initial="initial" animate="animate" className="slidingcontainer">
             lorem ipsum ndckjds
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       
       </div>
