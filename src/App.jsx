@@ -3,6 +3,7 @@ import Navbar from "./components/nav/navbar";
 import About from "./components/home/about";
 import Skills from "./components/skills/skills";
 import Work from "./components/work/work";
+import Contact from "./components/contact/contact";
 
 const App = () => {
   return (
@@ -25,8 +26,8 @@ const App = () => {
       >
         Work Experience
       </section>
-      <section id="Contact" style={{ height: "100vh", background: "green" }}>
-        Contact us
+      <section id="Contact">
+        <Contact/>
       </section>
     </div>
   );
