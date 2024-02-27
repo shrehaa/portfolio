@@ -1,50 +1,63 @@
-import './skills.scss'
-import React from 'react'
+import "./skills.scss";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { skills } from "../../../constants/constants";
 
-const skills =[{
-    name: "ReactJS", 
-    description : "I am well-versed in React, proficient in creating reusable components and managing application state using hooks and context."
+const variants = {
+  initial: {
+    x: -500,
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
     },
-   {
-    name: "JavaScript", 
-    description : "I have substantial experience in employing JavaScript to introduce interactivity and functionality into web pages, resulting in dynamic user interface."
-   },
-   {
-    name: "HTML", 
-    description : "I have a strong command of HTML for organizing web pages and generating meaningful content that can be accessed by all users."
-   },
-   {
-    name: "CSS", 
-    description : "I possess expertise in utilizing CSS to design web pages and craft visually captivating layouts that enhance the overall user experience."
-   },
-   {
-    name: "NodeJS", 
-    description : "When it comes to building web applications, I prefer using Node as my runtime environment over Yarn. I have expertise in leveraging Node.js to develop powerful and scalable web applications."
-   }]
+  },
+};
 
 const Skills = () => {
-  return (
-    <div className='servicecontainer'>
-        <div className='text'>
-            <p>Learner &gt; Developer</p>
-            <hr/>
-        </div>
-        <div className='title'>
-           <h2>My skills</h2> 
-            <h1>Technologies</h1>
-        </div>
-        <div className='list'>
-            {skills.map((x)=>{
-                return(
-                    <div className="box">
-                        <h2>{x.name}</h2>
-                        <p>{x.description}</p>
-                    </div>
-                )
-            })}
-        </div>
-    </div>
-  )
-}
+  const ref = useRef();
+  const { isInView } = useInView(ref, { margin: "-100px", once: true });
 
-export default Skills
+  return (
+    <motion.div
+      variants={variants}
+      initial="initial"
+      ref={ref}
+      whileInView="animate"
+      className="servicecontainer"
+    >
+      <motion.div variants={variants} whileInView="animate" className="text">
+        <motion.p whileInView="animate" whileHover={{ color: "orange" }}>
+          Learner &gt; Developer
+        </motion.p>
+        <hr />
+      </motion.div>
+      <motion.div variants={variants} whileInView="animate" className="title">
+        <h2>My skills</h2>
+        <motion.h1 whileHover={{ color: "orange" }}>Technologies</motion.h1>
+      </motion.div>
+      <motion.div variants={variants} whileInView="animate" className="list">
+        {skills.map((x) => {
+          return (
+            <motion.div
+              variants={variants}
+              whileInView="animate"
+              whileHover={{ scale: 1.4 }}
+              className="box"
+            >
+              <img height="100px" width="100px" src={x.icon} />
+            </motion.div>
+          );
+        })}
+      </motion.div>
+    </motion.div>
+  );
+};
+
+export default Skills;

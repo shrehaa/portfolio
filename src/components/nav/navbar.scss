@@ -1,24 +1,18 @@
-
-.navbar{
-    display: flex;
-    height: 15vh;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-    position: fixed;
-    color: white;
-    font-size: 25px;
-
+.navbar {
+  display: flex;
+  height: 15vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  position: fixed;
+  color: white;
+  font-size: 25px;
 }
 
-
-.navbar li{
-    list-style: none;
+.navbar li {
+  list-style: none;
 }
-.navbar li a{
-    cursor: pointer;
+.navbar li a {
+  cursor: pointer;
 }
-
-
-

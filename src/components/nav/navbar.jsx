@@ -1,8 +1,7 @@
 import "./navbar.scss";
 import logo from "../../../public/logo.png";
 import { motion } from "framer-motion";
-
-const items = ["About", "Skills", "Projects", "Experience", "Contact"];
+import { items } from "../../../constants/constants";
 
 const Navbar = () => {
   return (

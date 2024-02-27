@@ -2,6 +2,7 @@ import "./about.scss";
 import scroll from '../../../public/scroll.png';
 import { motion } from "framer-motion";
 
+
 const sliderVariants = {
   initial: {
     x: 0,
@@ -44,24 +45,24 @@ const About = () => {
   return (
     <div  className="container">
       <div  className="left">
-        <motion.div variants={textVariants} initial="initial" animate="animate" className="icons">
-          <motion.i variants={textVariants} initial="initial" animate="animate" className="fa-brands fa-facebook-f" />
-          <motion.i variants={textVariants} initial="initial" animate="animate" className="fa-brands fa-instagram" />
-          <motion.i variants={textVariants} initial="initial" animate="animate" class="fa-brands fa-github"></motion.i>
+        <motion.div variants={textVariants} initial="initial" whileInView="animate" className="icons">
+          <motion.i variants={textVariants} initial="initial" whileInView="animate" className="fa-brands fa-facebook-f" />
+          <motion.i variants={textVariants} initial="initial" whileInView="animate" className="fa-brands fa-instagram" />
+          <motion.i variants={textVariants} initial="initial" whileInView="animate" class="fa-brands fa-github"></motion.i>
         </motion.div>
-        <motion.div variants={textVariants} initial="initial" animate="animate" className="content">
-          <motion.h2 initial="initial" animate="animate" variants={textVariants}>
+        <motion.div variants={textVariants} initial="initial" whileInView="animate" className="content">
+          <motion.h2 initial="initial" whileInView="animate" variants={textVariants}>
             Hi! I am <span>Shreha Chowdhury</span>
           </motion.h2>
-          <motion.h1 initial="initial" animate="animate" variants={textVariants}>Frontend Developer</motion.h1>
-          <motion.p initial="initial" animate="animate" variants={textVariants}>
+          <motion.h1 initial="initial" whileInView="animate" variants={textVariants}>Frontend Developer</motion.h1>
+          <motion.p initial="initial" whileInView="animate" variants={textVariants}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
             nihil adipisci sapiente vel voluptatibus doloribus, maiores in
             consequatur facilis dignissimos saepe libero soluta cumque nulla
             iste nemo possimus dicta amet?
           </motion.p>
           
-          <motion.img style={{cursor:"pointer"}} animate="scrollButton" variants={textVariants} src='../../../public/scroll.png'/>
+          <motion.img style={{cursor:"pointer"}} whileInView="scrollButton" variants={textVariants} src='../../../public/scroll.png'/>
          
           {/* <motion.div variants={sliderVariants} initial="initial" animate="animate" className="slidingcontainer">
             lorem ipsum ndckjds
