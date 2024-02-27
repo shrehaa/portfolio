@@ -6,12 +6,13 @@ import { items } from "../../../constants/constants";
 const Navbar = () => {
   return (
     <div className="navbar">
-      {items.map((x) => {
+      {items.map((x,idx) => {
         return (
           <motion.a
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.95 }}
             href={`#${x}`}
+            key={idx}
           >
             {x}
           </motion.a>

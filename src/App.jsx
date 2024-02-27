@@ -2,6 +2,7 @@ import "./App.scss";
 import Navbar from "./components/nav/navbar";
 import About from "./components/home/about";
 import Skills from "./components/skills/skills";
+import Work from "./components/work/work";
 
 const App = () => {
   return (
@@ -15,11 +16,8 @@ const App = () => {
       <section id="Skills">
         <Skills />
       </section>
-      <section
-        id="Projects"
-        style={{ height: "100vh", background: "rebeccapurple" }}
-      >
-        Project
+      <section id="Projects">
+        <Work />
       </section>
       <section
         id="Experience"
