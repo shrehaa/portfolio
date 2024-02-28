@@ -41,6 +41,16 @@ const textVariants = {
 
 }
 
+const onButtonClick = () => {
+  const pdfUrl = './resume.pdf';
+  const link = document.createElement("a");
+  link.href = pdfUrl;
+  link.download = "Resume.pdf"; // specify the filename
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 const About = () => {
   return (
     <div  className="container">
@@ -56,12 +66,9 @@ const About = () => {
           </motion.h2>
           <motion.h1 initial="initial" whileInView="animate" variants={textVariants}>Frontend Developer</motion.h1>
           <motion.p initial="initial" whileInView="animate" variants={textVariants}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
-            nihil adipisci sapiente vel voluptatibus doloribus, maiores in
-            consequatur facilis dignissimos saepe libero soluta cumque nulla
-            iste nemo possimus dicta amet?
+          I develop and maintain responsive and user-friendly web applications.I have a master's degree in computer applications from C-DAC, where I learned various software engineering concepts and technologies, such as data structures, algorithms, databases, web development, and cloud computing. . I am passionate about learning new skills and technologies, and I aspire for a challenging and growth-oriented career in the corporate sector, where I can contribute to the organization's success and enhance my skills.
           </motion.p>
-          <button >Download Resume</button>
+          <button onClick={onButtonClick}>Download Resume</button>
           
           <motion.img style={{cursor:"pointer"}} whileInView="scrollButton" variants={textVariants} src='../../../public/scroll.png'/>
          

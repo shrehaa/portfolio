@@ -1,10 +1,24 @@
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 const Contact = () => {
   const ref = useRef();
+  const formRef = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
+  const [enable, setEnable] = useState(true);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    console.log(name, value);
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
+
   const variants = {
     initial: {
       y: 500,
@@ -19,6 +33,31 @@ const Contact = () => {
       },
     },
   };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setEnable(false);
+    emailjs
+      .sendForm(
+        "service_psqm8go",
+        "template_iu9zflt",
+        formRef.current,
+        "GnmlqqxhDOXIOHDCY"
+      )
+      .then(
+        (result) => {
+          setEnable(true);
+          formData.email = "";
+          formData.message = "";
+          formData.name = "";
+          alert("Email sent");
+        },
+        (error) => {
+          setEnable(true);
+          alert("Error! Try Again");
+        }
+      );
+  };
   return (
     <motion.div ref={ref} className="contactContainer">
       <motion.div
@@ -27,22 +66,11 @@ const Contact = () => {
         initial="initial"
         whileInView="animate"
       >
-        <motion.h1 variants={variants}>Let's work together!</motion.h1>
-        <motion.div variants={variants} className="itemcontainer">
-          <motion.h2 variants={variants}>Mail</motion.h2>
-          <motion.span variants={variants}>hello@react.dev</motion.span>
-          <motion.h2 variants={variants}>Address</motion.h2>
-          <motion.span variants={variants}>New Delhi</motion.span>
-          <motion.h2 variants={variants}>Phone</motion.h2>
-          <motion.span variants={variants}>+91-9667587198</motion.span>
-        </motion.div>
-      </motion.div>
-      <motion.div variants={variants} className="formContainer">
         <motion.div
           className="phoneSvg"
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
-          transition={{ delay: 2, duration: 1 }}
+          transition={{ delay: 3, duration: 1 }}
         >
           <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
             <motion.path
@@ -67,21 +95,32 @@ const Contact = () => {
             />
           </svg>
         </motion.div>
-
-        <motion.form
-          variants={variants}
-          //   ref={formRef}
-          //   onSubmit={sendEmail}
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 3, duration: 1 }}
+          transition={{ delay: 4, duration: 1 }}
         >
+          <motion.h1 variants={variants}>Let's work together!</motion.h1>
+          <motion.div variants={variants} className="itemcontainer">
+            <motion.h2 variants={variants}>Mail</motion.h2>
+            <motion.span variants={variants}>shreha.chowdhury0305@gmail.com</motion.span>
+            <motion.h2 variants={variants}>Address</motion.h2>
+            <motion.span variants={variants}>New Delhi</motion.span>
+            <motion.h2 variants={variants}>Phone</motion.h2>
+            <motion.span variants={variants}>+91-9667587198</motion.span>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+      <motion.div variants={variants} className="formContainer">
+        <motion.form variants={variants} ref={formRef} onSubmit={sendEmail}>
           <motion.input
             variants={variants}
             type="text"
             required
             placeholder="Name"
             name="name"
+            value={formData.name}
+            onChange={handleChange}
           />
           <motion.input
             variants={variants}
@@ -89,16 +128,20 @@ const Contact = () => {
             required
             placeholder="Email"
             name="email"
+            value={formData.email}
+            onChange={handleChange}
           />
           <motion.textarea
             variants={variants}
             rows={8}
             placeholder="Message"
             name="message"
+            value={formData.message}
+            onChange={handleChange}
           />
-          <motion.button variants={variants}>Submit</motion.button>
-          {/* {error && "Error"}
-          {success && "Success"} */}
+          <motion.button disabled={!enable} variants={variants}>
+            Submit
+          </motion.button>
         </motion.form>
       </motion.div>
     </motion.div>
