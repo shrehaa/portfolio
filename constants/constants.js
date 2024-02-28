@@ -6,7 +6,7 @@ import movie from "../public/corn.png";
 import ww from "../public/ww.png";
 import food from "../public/food.png";
 
-export const items = ["About", "Skills", "Projects", "Experience", "Contact"];
+export const items = ["About", "Skills", "Projects", "Contact"];
 export const skills = [
   {
     name: react,

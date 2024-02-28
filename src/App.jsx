@@ -20,12 +20,6 @@ const App = () => {
       <section id="Projects">
         <Work />
       </section>
-      <section
-        id="Experience"
-        style={{ height: "100vh", background: "yellow" }}
-      >
-        Work Experience
-      </section>
       <section id="Contact">
         <Contact/>
       </section>

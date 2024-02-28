@@ -61,6 +61,7 @@ const About = () => {
             consequatur facilis dignissimos saepe libero soluta cumque nulla
             iste nemo possimus dicta amet?
           </motion.p>
+          <button >Download Resume</button>
           
           <motion.img style={{cursor:"pointer"}} whileInView="scrollButton" variants={textVariants} src='../../../public/scroll.png'/>
          
