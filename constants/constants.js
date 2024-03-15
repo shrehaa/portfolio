@@ -5,6 +5,7 @@ import mui from "../public/mui.png";
 import movie from "../public/corn.png";
 import ww from "../public/ww.png";
 import food from "../public/food.png";
+import foodappLogo from '../public/logo.png'
 
 export const items = ["About", "Skills", "Projects", "Contact"];
 export const skills = [
@@ -40,11 +41,11 @@ export const skills = [
 ];
 export const projects = [
   {
-    name: "Netflix",
+    name: "Grains & Greens",
     decription:
-      "A video streaming app for people to watch various movies, tv series and leaning content too",
+      "A food delivery app to order your favourite yet healthy food items only depending on your mood",
     techstack: [react, redux, typeScript, mui],
-    icon: movie,
+    icon: foodappLogo,
   },
   {
     name: "Weekend Wanderer",
