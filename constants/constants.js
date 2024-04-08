@@ -2,24 +2,30 @@ import react from "../public/reactjs.png";
 import redux from "../public/redux.png";
 import typeScript from "../public/typeScript.png";
 import JavaScript from "../public/javascript.png";
+import html from "../public/html.png"
 import mui from "../public/mui.png";
 import ww from "../public/ww.jpg";
 import flix from "../public/flix.png";
 import gg from "../public/green&grains.png";
+import node from "../public/node.webp";
+import css from "../public/css.png";
+import git from "../public/git.png";
+import hub from "../public/github.png"
+
 
 export const items = ["About", "Skills", "Projects", "Contact"];
 export const skills = [
   {
     name: "react",
-    icon: "../../../public/reactjs.png",
+    icon: react,
   },
   {
     name: "JavaScript",
-    icon: "../../../public/javascript.png",
+    icon: JavaScript,
   },
   {
     name: "HTML",
-    icon: "../../../public/html.png",
+    icon: html,
   },
   {
     name: "CSS",
@@ -27,16 +33,16 @@ export const skills = [
   },
   {
     name: "NodeJS",
-    icon: "../../../public/node.webp",
+    icon: node,
   },
   {
     name: "GIT",
-    icon: "../../../public/git.png",
+    icon: git,
   },
   ,
   {
     name: "Github",
-    icon: "../../../public/github.png",
+    icon: hub,
   },
   {
     name: "Material Ui",
@@ -50,7 +56,7 @@ export const projects = [
       "A food delivery app which provides various options like wide range of catergories, scroll the catalog, filter as per mood, search an item, add to cart & extremely healthy food options to the user",
     techstack: [react, JavaScript, mui],
     icon: gg,
-    demo: "",
+    demo: "https://grainsandgreens.netlify.app/",
     code: "https://github.com/shrehaa/grains-green",
   },
   {
@@ -59,7 +65,7 @@ export const projects = [
       "A movie suggestion app for people to find various movies, GPT Search, using the latest GPT-3.5 Turbo API, with  Multi-Language support and advanced data handling with Redex Toolkit.",
     techstack: [react, redux, JavaScript, mui],
     icon: flix,
-    demo: "",
+    demo: "https://streamixio.netlify.app/",
     code: "https://github.com/shrehaa/flix-pro",
   },
   {

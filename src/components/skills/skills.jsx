@@ -33,14 +33,14 @@ const Skills = () => {
       className="servicecontainer"
     >
       <motion.div variants={variants} whileInView="animate" className="text">
-        <motion.p whileInView="animate">
-          Learner &gt; Developer
-        </motion.p>
+        <motion.p whileInView="animate">Learner &gt; Developer</motion.p>
         <hr />
       </motion.div>
       <motion.div variants={variants} whileInView="animate" className="title">
         <h2>My skills</h2>
-        <motion.h1 whileInView="animate" whileHover={{ color: "orange" }}>Technologies</motion.h1>
+        <motion.h1 whileInView="animate" whileHover={{ color: "orange" }}>
+          Technologies
+        </motion.h1>
       </motion.div>
       <motion.div variants={variants} whileInView="animate" className="list">
         {skills.map((x, idx) => {

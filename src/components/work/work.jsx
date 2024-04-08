@@ -37,7 +37,7 @@ const Single = ({ project }) => {
               })}
             </p>
             <div>
-              <button>See Demo</button>
+              <button onClick={() => handleURL(project.demo)}>See Demo</button>
               <button onClick={() => handleURL(project.code)}>View Code</button>
             </div>
           </motion.div>

@@ -1,7 +1,7 @@
 import "./about.scss";
 import { motion } from "framer-motion";
 import { env } from "../../../constants/constants";
-
+import scroll from '../../../public/scroll.png'
 const sliderVariants = {
   initial: {
     x: 0,
@@ -115,7 +115,7 @@ const About = () => {
             style={{ cursor: "pointer" }}
             whileInView="scrollButton"
             variants={textVariants}
-            src="../../../public/scroll.png"
+            src={scroll}
           />
 
           {/* <motion.div variants={sliderVariants} initial="initial" animate="animate" className="slidingcontainer">
