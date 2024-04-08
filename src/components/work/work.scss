@@ -64,7 +64,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 50px;
+      gap: 10px;
 
       .imageContainer {
         flex: 1;
@@ -85,13 +85,12 @@
         gap: 30px;
 
         h2 {
-          font-size: 70px;
+          font-size: 40px;
         }
         .tech {
           height: 70px;
           width: 70px;
           padding: 10px;
-          background-color: black;
         }
         p {
           color: #0c0c1d;

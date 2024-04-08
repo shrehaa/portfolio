@@ -4,7 +4,7 @@ import typeScript from "../public/typeScript.png";
 import JavaScript from "../public/javascript.png";
 import html from "../public/html.png"
 import mui from "../public/mui.png";
-import ww from "../public/ww.jpg";
+import ww from "../public/ww.png";
 import flix from "../public/flix.png";
 import gg from "../public/green&grains.png";
 import node from "../public/node.webp";
