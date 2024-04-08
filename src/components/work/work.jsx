@@ -33,7 +33,7 @@ const Single = ({ project }) => {
             <p>{project.decription}</p>
             <p>
               {project.techstack.map((img, id) => {
-                return <img className="tech" src={img} />;
+                return <img key={id} className="tech" src={img} />;
               })}
             </p>
             <div>

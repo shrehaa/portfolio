@@ -78,5 +78,5 @@ export const projects = [
   },
 ];
 
-const dev = "http://localhost:5174/";
-export const env = dev;
+//const dev = "http://localhost:5173/";
+export const env = import.meta.env.VITE_REACT_ENVIRONMENT;
