@@ -69,6 +69,7 @@
       .imageContainer {
         flex: 1;
         height: 50%;
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0) , black 100%);
 
         img {
           width: 100%;
@@ -90,6 +91,7 @@
           height: 70px;
           width: 70px;
           padding: 10px;
+          background-color: black;
         }
         p {
           color: #0c0c1d;

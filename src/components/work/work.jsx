@@ -10,13 +10,14 @@ const Single = ({ project }) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 2], [-300, 300]);
+  const handleURL = (url) => {
+    window.open(url, "_blank");
+  };
 
   return (
     <section className="sectioncontainer">
-       <div className="text">
-        <p >
-          What have I done
-        </p>
+      <div className="text">
+        <p>What have I done</p>
         <hr />
       </div>
       <div className="progress">
@@ -37,7 +38,7 @@ const Single = ({ project }) => {
             </p>
             <div>
               <button>See Demo</button>
-              <button>View Code</button>
+              <button onClick={() => handleURL(project.code)}>View Code</button>
             </div>
           </motion.div>
         </div>
