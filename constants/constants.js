@@ -29,7 +29,7 @@ export const skills = [
   },
   {
     name: "CSS",
-    icon: "../../../public/css.png",
+    icon: css,
   },
   {
     name: "NodeJS",
