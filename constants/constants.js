@@ -1,23 +1,16 @@
-import react from "../public/reactjs.png";
-import typeScript from "../public/typeScript.png";
-import JavaScript from "../public/javascript.png";
-import html from "../public/html.png"
-import mui from "../public/mui.png";
-import ww from "../public/ww.png";
-import flix from "../public/flix.png";
-import gg from "../public/green&grains.png";
+import html from "../public/html.png";
 import node from "../public/node.webp";
 import css from "../public/css.png";
-import git from "../public/git.png";
-import hub from "../public/github.png"
-
+import gg from "../public/green&grains.png";
+import flix from "../public/flix.png";
+import ww from"../public/ww.png"
 
 export const items = ["About", "Skills", "Projects", "Contact"];
 
-const reduxURL ="https://i.postimg.cc/rKbmYGxJ/redux.png";
-const reactURL = "https://i.postimg.cc/2303nN5g/reactjs.png"
-const muiURL = "https://i.postimg.cc/LJ1XdqVM/mui.png"
-const javascriptURL = "https://i.postimg.cc/jnS5BZM8/javascript.png"
+const reduxURL = "https://i.postimg.cc/rKbmYGxJ/redux.png";
+const reactURL = "https://i.postimg.cc/2303nN5g/reactjs.png";
+const muiURL = "https://i.postimg.cc/LJ1XdqVM/mui.png";
+const javascriptURL = "https://i.postimg.cc/jnS5BZM8/javascript.png";
 
 export const skills = [
   {
@@ -29,12 +22,12 @@ export const skills = [
     icon: javascriptURL,
   },
   {
-    name:"Redux",
-    icon:reduxURL
+    name: "Redux",
+    icon: reduxURL,
   },
   {
-    name:"TypeScript",
-    icon:"https://i.postimg.cc/R3x0vMPJ/typescript.png"
+    name: "TypeScript",
+    icon: "https://i.postimg.cc/R3x0vMPJ/typescript.png",
   },
   {
     name: "HTML",
@@ -61,7 +54,6 @@ export const skills = [
     name: "Material Ui",
     icon: muiURL,
   },
-  
 ];
 export const projects = [
   {
@@ -94,6 +86,5 @@ export const projects = [
 ];
 
 //A travel guide app where you can book you vacation packages, explore options for your travel from trekking to luxury trips, find group you can tag yourself along with, find various itineries and much more with GPT 3.5
-
 
 export const env = import.meta.env.VITE_REACT_ENVIRONMENT;

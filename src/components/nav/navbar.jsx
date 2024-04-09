@@ -1,5 +1,4 @@
 import "./navbar.scss";
-import logo from "../../../public/logo.png";
 import { motion } from "framer-motion";
 import { items } from "../../../constants/constants";
 
