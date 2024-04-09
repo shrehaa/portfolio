@@ -71,6 +71,7 @@ const Contact = () => {
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
           transition={{ delay: 3, duration: 1 }}
+          
         >
           <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
             <motion.path
@@ -99,6 +100,7 @@ const Contact = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
+          style={{marginTop:"100px"}}
         >
           <motion.h1 variants={variants}>Let's work together!</motion.h1>
           <motion.div variants={variants} className="itemcontainer">
@@ -133,7 +135,7 @@ const Contact = () => {
           />
           <motion.textarea
             variants={variants}
-            rows={8}
+            rows={4}
             placeholder="Message"
             name="message"
             value={formData.message}
