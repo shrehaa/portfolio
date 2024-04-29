@@ -36,10 +36,10 @@ const Single = ({ project }) => {
                 return <img key={id} className="tech" src={img} />;
               })}
             </p>
-            <div className="btngroup">
+            {project.name !== "Weekend Wanderer" &&<div className="btngroup">
               <button onClick={() => handleURL(project.demo)}>See Demo</button>
               <button onClick={() => handleURL(project.code)}>View Code</button>
-            </div>
+            </div>}
           </motion.div>
         </div>
       </div>
